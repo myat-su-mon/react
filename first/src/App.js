@@ -57,9 +57,17 @@ class Item extends React.Component {
 //     }
 // }
 
+// props method
 class AddForm extends React.Component {
     nameRef = React.createRef();
     priceRef = React.createRef();
+
+    add = () => {
+        let name = this.nameRef.current.value;
+        let price = this.priceRef.current.value;
+
+        this.props.add(name, price);
+    }
 
     render() {
         return (
@@ -110,6 +118,22 @@ class App extends React.Component {
             </div>
         )
     }
+}
+
+class Title extends React.Component { render() {
+    return <h1>{this.props.name}</h1>; }
+}
+class Header extends React.Component { render() {
+    return ( <div>
+            <Title name={this.props.name} />
+        </div>
+    ) }
+}
+class App2 extends React.Component { render() {
+    return ( <div>
+            <Header name="App Title" />
+            ... </div>
+    ) }
 }
 
 export default App;
