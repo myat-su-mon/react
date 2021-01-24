@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "create-react-app": "^4.0.1",
+    "expo-cli": "^4.0.17",
     "node-sass": "^5.0.0"
   }
 }
